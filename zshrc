@@ -95,9 +95,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export http_proxy=http://proxy-chain.intel.com:911
-export https_proxy=https://proxy-chain.intel.com:911
-
 prompt_context() {
     prompt_segment green default "[]"
     
