@@ -3,6 +3,8 @@ cd ~
 sudo apt update
 sudo apt upgrade -y
 
+sudo apt-get install apt-transport-https -y
+
 sudo apt install vim -y
 
 # Firewall
@@ -24,7 +26,9 @@ wget https://raw.githubusercontent.com/NathanPhilliber/Config-Files/master/.zshr
 sudo apt install zsh -y
 chsh -s $(which zsh)
 git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
-pwd | xargs -I {} sed -i.old '1s;^;export ZSH="{}.oh-my-zsh"\n;' .zshrc
+pwd | xargs -I {} sed -i.old '1s;^;export ZSH="{}/.oh-my-zsh"\n;' .zshrc
 rm .zshrc.old
 
-
+# Setup SSH
+mkdir ~/.ssh
+touch ~/.ssh/authorized_keys
